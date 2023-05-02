@@ -1,11 +1,11 @@
-package com.toyota.veiculo;
+package com.toyota.veiculo.model;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import java.util.Date;
+import java.time.LocalDate;
 
 @Entity
 @Data
@@ -26,5 +26,5 @@ public abstract  class Veiculo {
 
     private String cor;
 
-    private Date dataFabricacao;
+    private LocalDate dataFabricacao;
 }
