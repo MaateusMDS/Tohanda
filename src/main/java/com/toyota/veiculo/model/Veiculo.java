@@ -20,11 +20,23 @@ public abstract  class Veiculo {
     @Column(name = "ID_VEICULO")
     private Long id;
 
+    @Column(name = "DS_MODELO")
     private String modelo;
 
-    private String fabricante;
 
+    @ManyToOne(cascade = {CascadeType.PERSIST, CascadeType.MERGE}, fetch = FetchType.EAGER)
+    @JoinColumn(
+            name = ("NM_FABRICANTE"),
+            referencedColumnName = ("ID_FABRICANTE"),
+            foreignKey = @ForeignKey(
+                    name = "FK_ID_FABRICANTE"
+            )
+    )
+    private Fabricante fabricante;
+
+    @Column(name = "DS_COR")
     private String cor;
 
+    @Column(name = "DT_FABRICACAO")
     private LocalDate dataFabricacao;
 }

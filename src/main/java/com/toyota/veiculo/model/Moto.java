@@ -17,7 +17,7 @@ public class Moto extends Veiculo {
 
     private int adesivos;
 
-    public Moto(Long id, String modelo, String fabricante, String cor, LocalDate dataFabricacao, int adesivos) {
+    public Moto(Long id, String modelo, Fabricante fabricante, String cor, LocalDate dataFabricacao, int adesivos) {
         super(id, modelo, fabricante, cor, dataFabricacao);
         this.adesivos = adesivos;
     }

@@ -20,7 +20,7 @@ public class Carro extends Veiculo{
     @Column(name = "NUM_LUGARES")
     private int lugares;
 
-    public Carro(Long id, String modelo, String fabricante, String cor, LocalDate dataFabricacao, int lugares) {
+    public Carro(Long id, String modelo, Fabricante fabricante, String cor, LocalDate dataFabricacao, int lugares) {
         super(id, modelo, fabricante, cor, dataFabricacao);
         this.lugares = lugares;
     }
