@@ -22,5 +22,9 @@ public abstract  class Veiculo {
 
     private String modelo;
 
+    private String fabricante;
+
+    private String cor;
+
     private Date dataFabricacao;
 }
